@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Browser Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="chat-container">
+            <div class="header">
+                <h2>مساعد الذكاء الاصطناعي</h2>
+            </div>
+            <div id="chat-box" class="chat-box">
+                <!-- Messages will be appended here -->
+                <div class="message assistant">
+                    <p>مرحباً! كيف يمكنني مساعدتك اليوم؟</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <form id="message-form">
+                    <input type="text" id="message-input" placeholder="اكتب أمرًا..." autocomplete="off">
+                    <button type="submit">إرسال</button>
+                </form>
+            </div>
+        </div>
+        <div class="browser-container">
+            <div class="header">
+                <h2>عرض المتصفح</h2>
+            </div>
+            <div id="browser-view" class="browser-view">
+                <img id="screenshot" src="https://via.placeholder.com/1024x768.png?text=Browser+View" alt="Browser Screenshot">
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
