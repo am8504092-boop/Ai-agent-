@@ -19,7 +19,7 @@ def initialize_services():
         return
     print("Initializing services for the first time...")
     try:
-        OPENROUTER_API_KEY = "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"
+        OPENROUTER_API_KEY = "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"
         client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=OPENROUTER_API_KEY)
         print("OpenRouter client configured.")
         p = sync_playwright().start()
@@ -93,7 +93,7 @@ def get_ai_command(user_command, page_html):
     user_prompt = f"User command: \"{user_command}\"\n\nPage HTML for context:\n{truncated_html}"
 
     response = client.chat.completions.create(
-      model="mistralai/mistral-7b-instruct",
+      model="deepseek/deepseek-chat",
       messages=[
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_prompt},
